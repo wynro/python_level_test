@@ -24,3 +24,5 @@ def bien_formada(s, depth=0):
             return False
     except:
         print "Error: ", sys.exc_info()[0]
+
+def invertir(map):
