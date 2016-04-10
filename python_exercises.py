@@ -26,3 +26,19 @@ def bien_formada(s, depth=0):
         print "Error: ", sys.exc_info()[0]
 
 def invertir(map):
+    return_map = {}
+    for k, v in map.iteritems():
+        try:
+            if return_map.has_key(v):
+                # Concatenate
+                return_map[v] += [k]
+            else:
+                # New
+                return_map[v] = [k]
+        except TypeError:
+            # Conversion fail, ignore it silently
+            1+1
+        except:
+            print "Unexpected error: ", sys.exc_info()[0]
+            raise
+    return return_map
