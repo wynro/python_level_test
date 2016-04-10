@@ -1,0 +1,80 @@
+"# Prueba de nivel de Python\n",
+"Se compone de los siguientes ejercicios:\n",
+"- **Lista balanceada** 15 puntos\n",
+"- **Diccionario invertido** 10 puntos\n",
+"- **Generador no único** 15 puntos\n",
+"- **Clase musical** 10 puntos\n",
+"- **Carrera vertical** 30 puntos\n",
+
+Prueba 1:
+Lista balanceada: Tenemos una lista de tokens compuesta de paréntesis
+abiertos, paréntesis cerrados y enteros de 1 a 9. Una lista está bien
+formada si los paréntesis están balanceados y cada entero indica el
+número de pares de paréntesis que rodean a dicho valor.
+
+Implementar ```bien_formada```, que toma una lista de tokens y devuelve ```True``` si y solo si la lista de tokens está bien formada. 
+
+```
+> print bien_formada(list('(1)'))
+True
+> print bien_formada(list('(2)'))
+False
+> print bien_formada(list('((2)((3)))'))
+True
+> print bien_formada(list('((3)((2)))'))
+False
+> print bien_formada(list('(((3)((4))(3))(2)((3)))'))
+True
+```
+
+
+Usa el siguiente código de partida:
+
+```
+def bien_formada(s, depth=0):
+    try:
+        first = s.pop(0)
+        if first != '(':
+            return depth == int(first)
+
+Prueba 2:
+**Diccionario invertido**: La función ``invertir`` toma un diccionario y devuelve un diccionario nuevo donde los valores son claves y las claves se convierten en una lista de valores. Si un valor no puede convertirse en clave se descarta.
+```
+> print(invertir({'a':5, 'b':3, 'c':2, 'd':3}))
+{2: ['c'], 3: ['b', 'd'], 5: ['a']}
+> print(invertir({'a':5, 'b':3, 'c':[2], 'd':3}))
+{3: ['b', 'd'], 5: ['a']}\
+
+Prueba 3:
+**Generador no único**: La función generadora ``no_unico`` toma cualquier iterable como argumento y devuelve un iterador sobre todos los elementos no únicos en el orden en el que se detecta que no son únicos.
+
+```
+> list(no_unico([1, 3, 2, 2, 5, 3, 4, 1]))
+[2, 3, 1]
+
+Prueba 4:
+**Clase musical**: Crea una clase denominada `Cancion` que tenga un método `play`que escriba en pantalla las estrofas de una canción que se le haya pasado en el constructor.
+```
+> cancion = Cancion([\"Cumpleaños feliz\", \"Cumpleaños feliz\", \"Te deseamos todos\", \"Cumpleaños feliz\"])
+> cancion.play()
+Cumpleaños feliz
+Cumpleaños feliz
+Te deseamos todos
+Cumpleaños feliz
+
+Prueba 4:
+**Carrera Vertical:** Un corredor participa en una carrera vertical de _n_ escalones pudiendo subir 1, 2 ó 3 escalones cada vez. Implementa una función que cuente todas las formas posibles de subir _n_ escalones.
+```
+> print staircaseCount(1)
+1
+> print staircaseCount(2)
+2
+> print staircaseCount(3)
+4
+> print staircaseCount(4)
+7
+```
+La función debe ser capaz de computar en milisegundos cuantas formas posibles hay de subir 2500 escalones.
+```
+> print staircaseCount(2500)
+25995141303821807172626236125906607615866791331561915620894574816921166800783923163332957535456271118463859873532852472723081575732040959420569217974251649035410975341213005762974633863697137749526890977505439660087436608713532914323869402616134445658944972896728120963411762122409556001067164509550348737157978465715896564604789452958067810550967263935696654067812304084042952611890333378496696245046542645295156787769713726767193263664300047841280740907689056815793889572131230684861580654047165401179620363687057859687709472816310747945105347461038894919004972392012629651907230981574199275727359628753065632760532058527830684202805216236662454100846575950215
