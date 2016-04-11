@@ -65,3 +65,13 @@ class Cancion:
             print i
 
 def staircase_count(number):
+    if number < 0:
+        return 0
+    elif number <3:
+        return number
+    elif number == 3:
+        return 4
+    else:
+        return staircase_count(number-1) + staircase_count(number-2) + staircase_count(number-3)
+
+sys.setrecursionlimit(3000)
