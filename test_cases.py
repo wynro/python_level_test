@@ -64,7 +64,7 @@ class FullTest(unittest.TestCase):
         ]
 
         for test in tests:
-            self.assertEquals(py_ex.staircase_count(test[0]), test[1])
+            self.assertEquals(py_ex.staircase_count_v2(test[0]), test[1])
 
         # Speed test
         tests = [
@@ -73,7 +73,7 @@ class FullTest(unittest.TestCase):
 
         before = datetime.datetime.now()
         for test in tests:
-            self.assertEquals(py_ex.staircase_count(test[0]), test[1])
+            self.assertEquals(py_ex.staircase_count_v2(test[0]), test[1])
         after = datetime.datetime.now()
         self.assertTrue((before-after).microseconds < 1000000)
 
