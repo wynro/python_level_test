@@ -55,3 +55,11 @@ def no_unico(list):
     return iter(not_unique)
 
 class Cancion:
+    lines = []
+
+    def __init__(self, lines):
+        self.lines = lines
+
+    def play(self):
+        for i in self.lines:
+            print i
