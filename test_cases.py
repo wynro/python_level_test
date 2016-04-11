@@ -44,5 +44,10 @@ class FullTest(unittest.TestCase):
         for test in tests:
             self.assertEquals(list(py_ex.no_unico(test[0])), test[1])
 
+    def test_exercise_4(self):
+        # I don't know how to check a function output
+        c = py_ex.Cancion(["linea0", "linea1", "linea2", "linea3", "linea4", "linea5", "linea6", "linea7", "linea8", "linea9", "linea10"])
+        c.play()
+
 if __name__ == '__main__':
     unittest.main()

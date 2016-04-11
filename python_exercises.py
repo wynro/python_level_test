@@ -53,3 +53,5 @@ def no_unico(list):
             if i not in not_unique:
                 not_unique += [i]
     return iter(not_unique)
+
+class Cancion:
