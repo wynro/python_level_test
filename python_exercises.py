@@ -63,3 +63,5 @@ class Cancion:
     def play(self):
         for i in self.lines:
             print i
+
+def staircase_count(number):
