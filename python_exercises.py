@@ -44,3 +44,12 @@ def invertir(map):
     return return_map
 
 def no_unico(list):
+    already_found = []
+    not_unique = []
+    for i in list:
+        if i not in already_found:
+            already_found += [i]
+        else:
+            if i not in not_unique:
+                not_unique += [i]
+    return iter(not_unique)
