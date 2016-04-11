@@ -42,3 +42,5 @@ def invertir(map):
             print "Unexpected error: ", sys.exc_info()[0]
             raise
     return return_map
+
+def no_unico(list):

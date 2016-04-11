@@ -32,5 +32,17 @@ class FullTest(unittest.TestCase):
         for test in tests:
             self.assertEqual(py_ex.invertir(test[0]), test[1])
 
+    def test_exercise_3(self):
+        """
+        Test corresponding with the third exercise
+        """
+        tests = [
+            ([1, 3, 2, 2, 5, 3, 4, 1], [2, 3, 1]),
+            ([1, 3, 2, 2, 5, 2, 4, 1], [2, 1]),
+            ([1, 3, 1], [1])
+        ]
+        for test in tests:
+            self.assertEquals(list(py_ex.no_unico(test[0])), test[1])
+
 if __name__ == '__main__':
     unittest.main()
