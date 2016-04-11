@@ -1,0 +1,3 @@
+NIP     Nombre
+=================================
+604409  Guillermo Robles Gonzalez
